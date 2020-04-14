@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 8080;
+const PORT = 4713;
 
 app.get('/', (req, res) => {
     res.send("Hello");
@@ -11,11 +11,32 @@ app.get('/', (req, res) => {
 });
 
 app.get('/test', (req, res) => {
-    console.log(`Something`)
-    res.send("Hi")
+    console.log(`Anything`)
+    res.send("Bye")
 });
+
+app.get('/login', (req, res) => {
+    console.log(`You are at login page.`)
+    res.send("Login")
+});
+
+app.get('/register', (req, res) => {
+    console.log(`You are at register page.`)
+    res.send("Register")
+});
+
+app.get('/writeMessage', (req, res) => {
+    console.log(`You are at writeMessage page.`)
+    res.send("Write Message")
+});
+
+app.get('/readMessage', (req, res) => {
+    console.log(`You are at readMessage page.`)
+    res.send("Read Message")
+});
+
 
 app.listen(PORT, 
     () => console.log(`App is listenting on PORT: ${PORT}`)
 );
-console.log(`Something else`)
+//console.log(`Something else`)
